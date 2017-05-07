@@ -20,6 +20,7 @@
 		include('inc/warsummary.php'); 
 	?>
 </div>
+	
 <div class="spacer"></div>
 <div class="header">about</div>
 <div class="spacer"></div>
@@ -31,6 +32,7 @@
 <br/><br/>
 	Here's to many more seasons of demonic skill, impossible rails and "these fucking campers", may it be in QL, QC or Diabetical.
 </div>
+	
 <div class="spacer"></div>
 <div class="header">the boys</div>
 <div class="spacer"></div>
@@ -51,36 +53,37 @@
 	<li>batu</li>
 	</ol></div>
 </div>
+	
 <div class="spacer"></div>
 <div class="header">extras</div>
 <div class="spacer"></div>
 <div class="container">
-	In case you're one of those spoonfed kids who don't like
-	opening demo files in game client, we've got you covered. 
-	Check out our <a href="https://www.youtube.com/channel/UCkkMgl_SKOEj7QmdqDh4xvw" target="_blank">YouTube</a> 
-	and make sure you SMASH THAT <a href="https://www.youtube.com/channel/UCkkMgl_SKOEj7QmdqDh4xvw?sub_confirmation=1" target="_blank">SUBSCRIBE BUTTON</a> 
-	to stay up to date with everyone who we've rekt.<br/><br/>
+	We've got a <a href="https://www.youtube.com/channel/UCkkMgl_SKOEj7QmdqDh4xvw" target="_blank">YouTube channel</a>! 
+	Why? Well, it's easier to watch demos via YT than with QL 
+	client. Make sure you <a href="https://www.youtube.com/channel/UCkkMgl_SKOEj7QmdqDh4xvw?sub_confirmation=1" target="_blank">subscribe</a> 
+	to the channel to stay up to date with everyone who we've 
+	rekt so far.
+	<br/><br/>
 	In addition to 1080p60 renders of pure steamrolling, 
 	we're also providing you with our configs and some 
-	#rekt emojis you can use with your discord/twitch/whatever.<br/><br/>
+	#rekt emojis you can use with your discord/twitch/whatever.
 	
-	<div class="left">HoQ Spring 2017 demos:
-		<div class="dirlist"><ol>
-			<?php
-				include('inc/demolist.php'); 
-			?>
-		</ol></div>
-	</div>
-	<div class="right">Configs:<br/>
-		<div class="dirlist">
-		<ol>
-			<?php
-				include('inc/cfglist.php'); 
-			?>
-		</ol>
+	<div class="left">
+		<div class="dirlist">Emoji
+			<ol>
+				<li><a href="extras/rekt-emoji.zip">rekt-emoji.zip</a></li>
+			</ol>
+		</div>
+		<div class="dirlist">Configs
+			<ol>
+				<?php
+					include('inc/cfglist.php'); 
+				?>
+			</ol>
 		</div>
 	</div>
 </div>
+	
 <div class="spacer"></div>
 <div class="header">(c) rekt 2017</div>
 <div class="spacer"></div>
