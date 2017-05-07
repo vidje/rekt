@@ -1,5 +1,5 @@
-<? 
-	include('db/dbconn.php'); 
+<?php 
+	include('inc/dbconn.php'); 
 	$mid = $_GET["id"];
 	$statement = $db->prepare("SELECT * FROM wars WHERE matchid = '$mid'");
 	$statement->execute();
@@ -37,30 +37,30 @@
 
 <div class="logo"></div>
 <div class="spacer"></div>
-<div class="header">#rekt vs <? echo $enemy; ?> (<? echo $score; ?>)</div>
+<div class="header">#rekt vs <?= $enemy; ?> (<?= $score; ?>)</div>
 
 <div class="spacer"></div>
 <div class="container">
 
 	<div class="left">
-	LEAGUE..........: <? echo $league; ?> (<? echo $game; ?>)<br />
-	SEASON..........: <? echo $season; ?><br />
-	TIER............: <? echo $tier; ?><br />
-	DATE PLAYED.....: <? echo $date; ?>
+	LEAGUE..........: <?= $league; ?> (<?= $game; ?>)<br />
+	SEASON..........: <?= $season; ?><br />
+	TIER............: <?= $tier; ?><br />
+	DATE PLAYED.....: <?= $date; ?>
 	<br /><br />
 	</div>
 	
 	<div class="right">
-	VODS............: <a href="<? echo $yt; ?>">yt</a><br />
-	DEMOS...........: <a href="<? echo $demos; ?>">dl</a><br /> 
+	VODS............: <a href="<?= $yt; ?>">yt</a><br />
+	DEMOS...........: <a href="<?= $demos; ?>">dl</a><br /> 
 	</div>
 	<div class="left">
 	MAPS<br />
 
-	MAP 1...........: <a href="<? echo $map1; ?>"><? echo $m1n; ?></a><br />
-	MAP 2...........: <a href="<? echo $map2; ?>"><? echo $m2n; ?></a><br />
+	MAP 1...........: <a href="<?= $map1; ?>"><?= $m1n; ?></a><br />
+	MAP 2...........: <a href="<?= $map2; ?>"><?= $m2n; ?></a><br />
 	MAP 3...........: 
-	<? if($map3 !== '') {
+	<?php if($map3 !== '') {
 		echo "Not needed";
 	}
 	else
@@ -72,15 +72,15 @@
 	<div class="right"><br/><br/><br/><br/><br/></div>
 	<div class="left">LINEUPS<br/>
 	<span class="teamname">#rekt</span> <br/>
-		<? echo str_replace(" ","<br/>",$rekt); ?>
+		<?= str_replace(" ","<br/>",$rekt); ?>
 	</div>
 	<div class="right"><br/>
-	<span class="teamname"><? echo $enemyln; ?> (<? echo $enemy; ?>)</span> <br />
-		<? echo str_replace(" ","<br/>",$enemylu); ?>
+	<span class="teamname"><?= $enemyln; ?> (<?= $enemy; ?>)</span> <br />
+		<?= str_replace(" ","<br/>",$enemylu); ?>
 	</div>
 </div>
 <div class="container">
-<? echo "<span class='wleft'><a href='".$_SERVER['HTTP_REFERER']."'>BACK</a></span>"; ?>
+<?= "<span class='wleft'><a href='".$_SERVER['HTTP_REFERER']."'>BACK</a></span>"; ?>
 </div>
 <div class="spacer"></div>
 <div class="header">(c) rekt 2017</div>

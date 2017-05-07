@@ -1,5 +1,5 @@
-<? 
-	include('db/dbconn.php'); 
+<?php 
+	include('inc/dbconn.php'); 
 	$statement = $db->prepare("SELECT * FROM wars ORDER BY date DESC");	
 	$statement->execute();
 	$array = $statement->fetchAll();
@@ -21,7 +21,7 @@
 The wars are listed from newest to oldest.
 If the match details link isn't next to the war then this is the only info that survived.
 <br/><br/>
-<?
+<?php
 	$id = 0;
 	foreach($array as $arr) {
 		$league = $array[$id]['league'];
@@ -47,7 +47,7 @@ If the match details link isn't next to the war then this is the only info that 
 
 </div>
 <div class="container">
-<?
+<?php
 	echo "<span class='wleft'><a href='./'>BACK</a></span>";
 ?>
 </div>

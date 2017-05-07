@@ -1,5 +1,5 @@
 <?php
-$directory = "configs/";
+$directory = "extras/configs/";
 $phpfiles = glob($directory . "*.cfg");
 
 foreach($phpfiles as $phpfile)
