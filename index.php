@@ -15,7 +15,7 @@
 <div class="spacer"></div>
 <div class="header">wars</div>
 <div class="spacer"></div>
-<div class="container">
+<div class="container warlist">
 	<?php
 		include('inc/warsummary.php'); 
 	?>

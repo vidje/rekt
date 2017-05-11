@@ -1,11 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=VT323);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 @font-face {
 	font-family: 'Fixedsys Excelsior 3.01';
 	font-style: normal;
 	font-weight: normal;
 	src: local('Fixedsys Excelsior 3.01'), url('../assets/fonts/FSEX300.woff') format('woff');
 }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,21 +18,25 @@ html, body {
 body {
 	background: #000;
 	color: #aaa;
-	font-family: "Fixedsys Excelsior 3.01";
+	font-family: "Fixedsys Excelsior 3.01", monospace;
 	font-size: 16px;
 	
 }
 
 a {
 	text-decoration: none;
+	color: #85678f;
+}
+
+.warlist a {
 	color: #aaa;
 }
 
-a:before {
+.warlist a:before {
 	content: "[";
 }
 
-a:after {
+.warlist a:after {
 	content: "]";
 }
 
@@ -71,6 +74,8 @@ ol {
 	padding: 5px;
 	text-transform: uppercase;
 	text-align: center;
+	font-family: "Fixedsys Excelsior 3.01";
+	font-size: 16px;
 }
 
 .container {
@@ -93,6 +98,7 @@ ol {
 .container .left {
 	width: 250px;
 	display: inline-block;
+	color: #aaa;
 }
 
 .container .right {
@@ -100,6 +106,7 @@ ol {
 	display: inline-block;
 	float: right;
 	text-align: right;
+	color: #aaa;
 }
 
 .container .right li:after {
@@ -122,6 +129,7 @@ ol {
 	margin-top: 10px;
 	overflow: hidden !important;
 	text-overflow: ellipsis;
+	color: #aaa;
 }
 
 .dirlist a:before,
@@ -134,14 +142,38 @@ ol {
 	font-size: 9px;
 	text-align: center;
 	margin-bottom: -15px;
+	color: #aaa;
 }
 
 .wleft {
 	display: inline-block;
 	float: left;
+	color: #aaa;
 }
 
 .wright {
 	display: inline-block;
 	float: right;
+	color: #aaa;
+}
+
+.ppic {
+	width: 60%;
+	height: 60%;
+}
+
+.icon-facebook:before,
+.icon-vkontakte:before,
+.icon-youtube:before,
+.icon-twitch:before {
+  content: "\e902";
+	font-size: 14px;
+}
+
+.social {
+	text-align: center;
+}
+
+.social a {
+	color: #aaa;
 }

@@ -28,7 +28,7 @@
 				echo "<br/>";
 			}
 			else {
-				echo "<a href='war.php?id=".$matchid."'>MATCH DETAILS</a><br/>";
+				echo "<a href='war.php?id=".$matchid."'>DETAILS</a><br/>";
 			}
 			$id++;
 

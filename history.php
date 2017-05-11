@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>#rekt - the last div1 team standing</title>
+	<title>#rekt - war history</title>
 	<link href="css/stil.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 <div class="spacer"></div>
 <div class="header">war history</div>
 <div class="spacer"></div>
-<div class="container">
+<div class="container warlist">
 The wars are listed from newest to oldest.
 If the match details link isn't next to the war then this is the only info that survived.
 <br/><br/>
@@ -39,14 +39,14 @@ If the match details link isn't next to the war then this is the only info that 
 		else {
 			echo "<span class='wleft'>".$date." - ".$league." - ".$season." - ".$score." VS ".$enemy."</span>";
 			echo "<span class='wright'>".
-			"<a href='war.php?id=".$mid."'>MORE</a></span>";
+			"<a href='war.php?id=".$mid."'>DETAILS</a></span>";
 		}
 		$id++;
 	}
 ?>
 
 </div>
-<div class="container">
+<div class="container warlist">
 <?php
 	echo "<span class='wleft'><a href='./'>BACK</a></span>";
 ?>

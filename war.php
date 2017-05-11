@@ -29,7 +29,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>#rekt - the last div1 team standing</title>
+	<title>#rekt vs <?= $enemyln; ?></title>
 	<link href="css/stil.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -40,7 +40,7 @@
 <div class="header">#rekt vs <?= $enemy; ?> (<?= $score; ?>)</div>
 
 <div class="spacer"></div>
-<div class="container">
+<div class="container warlist">
 
 	<div class="left">
 	LEAGUE..........: <?= $league; ?> (<?= $game; ?>)<br />
@@ -51,21 +51,21 @@
 	</div>
 	
 	<div class="right">
-	VODS............: <a href="<?= $yt; ?>">yt</a><br />
+	VODS............: <a href="<?= $yt; ?>" target="_blank">yt</a><br />
 	DEMOS...........: <a href="<?= $demos; ?>">dl</a><br /> 
 	</div>
 	<div class="left">
 	MAPS<br />
 
-	MAP 1...........: <a href="<?= $map1; ?>"><?= $m1n; ?></a><br />
-	MAP 2...........: <a href="<?= $map2; ?>"><?= $m2n; ?></a><br />
+	MAP 1...........: <a href="<?= $map1; ?>" target="_blank"><?= $m1n; ?></a><br />
+	MAP 2...........: <a href="<?= $map2; ?>" target="_blank"><?= $m2n; ?></a><br />
 	MAP 3...........: 
 	<?php if($map3 !== '') {
 		echo "Not needed";
 	}
 	else
 	{
-		echo '<a href="'.$map3.'">'.$m3n.'</a><br/>';
+		echo '<a href="'.$map3.'" target="_blank">'.$m3n.'</a><br/>';
 	}
 	?><br /><br />
 	</div>
@@ -79,8 +79,16 @@
 		<?= str_replace(" ","<br/>",$enemylu); ?>
 	</div>
 </div>
-<div class="container">
-<?= "<span class='wleft'><a href='".$_SERVER['HTTP_REFERER']."'>BACK</a></span>"; ?>
+<div class="container warlist">
+	<?php 
+		if(!empty($backlink)) {
+			$backlink = $_SERVER['HTTP_REFERER'];
+			echo "<span class='wleft'><a href='".$backlink."'>BACK</a></span>"; 
+		}
+		else {
+			echo "<a href='./'>BACK</a>";
+		}	
+	?>
 </div>
 <div class="spacer"></div>
 <div class="header">(c) rekt 2017</div>
