@@ -184,3 +184,13 @@ ol {
 	white-space: nowrap;
 }
 
+input[type=submit], select {
+	background: transparent;
+	color: #fff;
+	font-family: "Fixedsys Excelsior 3.01", monospace;
+	border: 1px solid #aaa;
+}
+
+input[type=submit] {
+	padding: 1px;
+}

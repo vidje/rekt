@@ -1,6 +1,17 @@
 <?php 
 	include('inc/dbconn.php'); 
-	$statement = $db->prepare("SELECT * FROM wars ORDER BY date DESC");	
+	$filter = $_GET["f"];
+
+	$fstatement = $db->prepare("SELECT DISTINCT league, season FROM wars ORDER BY season DESC");
+	$fstatement->execute();
+	$filters = $fstatement->fetchAll();
+
+	if (empty($filter)) {
+		$statement = $db->prepare("SELECT * FROM wars ORDER BY date DESC");
+	}
+	else {
+		$statement = $db->prepare("SELECT * FROM wars WHERE season LIKE '$filter' ORDER BY date DESC");
+	}
 	$statement->execute();
 	$array = $statement->fetchAll();
 ?>
@@ -21,6 +32,22 @@
 The wars are listed from newest to oldest.
 If the match details link isn't next to the war then this is the only info that survived.
 <br/><br/>
+
+<form action="history.php?f=" name="filter">
+	Show <select name="f">
+	<option value="">All</option>
+	<?php
+	$i = 0;
+	foreach($filters as $flt) {
+		$fleague = $filters[$i]['league'];
+		$fseason = $filters[$i]['season'];
+		echo '<option value="'.$fseason.'">'.$fleague.' '.$fseason.'</option>';
+		$i++;
+	}
+	?>
+	</select>
+	<input type="submit" value="Apply"></input>
+	</form><br/>
 <?php
 	$id = 0;
 	foreach($array as $arr) {
