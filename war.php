@@ -43,15 +43,23 @@
 <div class="container warlist">
 
 	<div class="left">
-	LEAGUE..........: <?= $league; ?> (<?= $game; ?>)<br />
-	SEASON..........: <?= $season; ?><br />
-	TIER............: <?= $tier; ?><br />
-	DATE PLAYED.....: <?= $date; ?>
+		LEAGUE..........: <span class="trunc"><?= $league; ?> (<?= $game; ?>)</span><br />
+		SEASON..........: <span class="trunc"><?= $season; ?></span><br />
+		TIER............: <span class="trunc"><?= $tier; ?></span><br />
+		DATE PLAYED.....: <span class="trunc"><?= $date; ?></span>
 	<br /><br />
 	</div>
 	
 	<div class="right">
-	VODS............: <a href="<?= $yt; ?>" target="_blank">yt</a><br />
+	VODS............: 
+	<?php if(empty($yt)) {
+		echo "&nbsp;n/a <br/>";
+	}
+	else
+	{
+		echo '<a href="'.$yt.'">dl</a><br />';
+	}
+	?>
 	DEMOS...........: 
 	<?php if(empty($demos)) {
 		echo "&nbsp;n/a <br/>";
