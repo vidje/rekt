@@ -2,7 +2,7 @@
 	include('inc/dbconn.php'); 
 	$filter = $_GET["f"];
 
-	$fstatement = $db->prepare("SELECT DISTINCT league, season FROM wars ORDER BY season DESC");
+	$fstatement = $db->prepare("SELECT DISTINCT league, season FROM wars ORDER BY league ASC");
 	$fstatement->execute();
 	$filters = $fstatement->fetchAll();
 
@@ -60,13 +60,13 @@ If the match details link isn't next to the war then this is the only info that 
 		$score = $array[$id]['score'];
 		$mid = $array[$id]['matchid'];
 		if(empty($mid)) {
-			echo "<span class='wleft'>".$date." - ".$league." - ".$season." - ".$score." VS ".$enemy."</span>";
-			echo "<span class='wright'></span>";
+			echo "<span class='wleft htrunc'>".$date." - ".$league." - ".$season." - ".$score." VS ".$enemy."</span>";
+			echo "<span class='wright'></span><br/>";
 		}
 		else {
-			echo "<span class='wleft'>".$date." - ".$league." - ".$season." - ".$score." VS ".$enemy."</span>";
+			echo "<span class='wleft htrunc'>".$date." - ".$league." - ".$season." - ".$score." VS ".$enemy."</span>";
 			echo "<span class='wright'>".
-			"<a href='war.php?id=".$mid."'>DETAILS</a></span>";
+			"<a href='war.php?id=".$mid."'>DETAILS</a></span><br/>";
 		}
 		$id++;
 	}
