@@ -177,3 +177,10 @@ ol {
 .social a {
 	color: #aaa;
 }
+
+.trunc {
+	display: inline-block;
+	max-width: 100px;
+	white-space: nowrap;
+}
+

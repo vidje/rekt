@@ -52,20 +52,28 @@
 	
 	<div class="right">
 	VODS............: <a href="<?= $yt; ?>" target="_blank">yt</a><br />
-	DEMOS...........: <a href="<?= $demos; ?>">dl</a><br /> 
+	DEMOS...........: 
+	<?php if(empty($demos)) {
+		echo "&nbsp;n/a <br/>";
+	}
+	else
+	{
+		echo '<a href="'.$demos.'">dl</a><br />';
+	}
+	?>
 	</div>
 	<div class="left">
 	MAPS<br />
 
-	MAP 1...........: <a href="<?= $map1; ?>" target="_blank"><?= $m1n; ?></a><br />
-	MAP 2...........: <a href="<?= $map2; ?>" target="_blank"><?= $m2n; ?></a><br />
+	MAP 1...........: <span class="trunc"><a href="<?= $map1; ?>" target="_blank"><?= $m1n; ?></a></span><br />
+	MAP 2...........: <span class="trunc"><a href="<?= $map2; ?>" target="_blank"><?= $m2n; ?></a></span><br />
 	MAP 3...........: 
-	<?php if($map3 !== '') {
+	<?php if(empty($map3)) {
 		echo "Not needed";
 	}
 	else
 	{
-		echo '<a href="'.$map3.'" target="_blank">'.$m3n.'</a><br/>';
+		echo '<span class="trunc"><a href="'.$map3.'" target="_blank">'.$m3n.'</a></span><br/>';
 	}
 	?><br /><br />
 	</div>
