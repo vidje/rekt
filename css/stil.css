@@ -191,10 +191,14 @@ ol {
 }
 
 input[type=submit], select {
-	background: transparent;
-	color: #fff;
+	background: #000;
 	font-family: "Fixedsys Excelsior 3.01", monospace;
 	border: 1px solid #aaa;
+	color: #aaa;
+}
+
+select {
+	width: 100px;
 }
 
 input[type=submit] {
