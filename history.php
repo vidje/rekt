@@ -24,7 +24,7 @@
 <body>
 <div id="main">
 
-<div class="logo"></div>
+<a href="./"><div class="logo"></div></a>
 <div class="spacer"></div>
 <div class="header">war history</div>
 <div class="spacer"></div>

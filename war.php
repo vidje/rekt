@@ -35,7 +35,7 @@
 <body>
 <div id="main">
 
-<div class="logo"></div>
+<a href="./"><div class="logo"></div></a>
 <div class="spacer"></div>
 <div class="header">#rekt vs <?= $enemy; ?> (<?= $score; ?>)</div>
 
@@ -57,7 +57,7 @@
 	}
 	else
 	{
-		echo '<a href="'.$yt.'">dl</a><br />';
+		echo '<a href="'.$yt.'">yt</a><br />';
 	}
 	?>
 	DEMOS...........: 
@@ -97,8 +97,8 @@
 </div>
 <div class="container warlist">
 	<?php 
+		$backlink = $_SERVER['HTTP_REFERER'];
 		if(!empty($backlink)) {
-			$backlink = $_SERVER['HTTP_REFERER'];
 			echo "<span class='wleft'><a href='".$backlink."'>BACK</a></span>"; 
 		}
 		else {
